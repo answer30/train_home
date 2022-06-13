@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraints01"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraints02"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+        <Button
+            android:id="@+id/btn_setting"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:background="#00000000"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:onClick="btnClick"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraints02"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/main_menu"
+        app:layout_constraintBottom_toTopOf="@+id/constraints03"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/constraints01"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+
+        <Button
+            android:id="@+id/btn_01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text=""
+            android:background="#00000000"
+            app:layout_constraintBottom_toTopOf="@+id/btn_03"
+            app:layout_constraintEnd_toStartOf="@+id/btn_02"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1"
+            android:onClick="btnClick"
+            />
+
+
+        <Button
+            android:id="@+id/btn_02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text=""
+            android:background="#00000000"
+            app:layout_constraintBottom_toTopOf="@+id/btn_03"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_01"
+            app:layout_constraintTop_toTopOf="@+id/btn_01"
+            android:onClick="btnClick"
+            />
+
+        <Button
+            android:id="@+id/btn_03"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text=""
+            android:background="#00000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_04"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_01"
+            app:layout_constraintVertical_weight="1"
+            android:onClick="btnClick"
+            />
+
+        <Button
+            android:id="@+id/btn_04"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text=""
+            android:background="#00000000"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_03"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/btn_03"
+            app:layout_constraintTop_toTopOf="@+id/btn_03"
+            app:layout_constraintVertical_weight="1"
+            android:onClick="btnClick"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraints03"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/music"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/constraints02"
+        app:layout_constraintTop_toBottomOf="@+id/constraints02">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/exoPlayerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_shadow_side" />
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e1e1e1"
+            android:onClick="btnClick"
+            />
+
+        <ImageView
+            android:layout_width="500px"
+            android:layout_height="wrap_content"
+            android:src="@drawable/power"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imagebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="60dp"
+            android:src="@drawable/paly_nor"
+            android:tint="#b8a36f"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
